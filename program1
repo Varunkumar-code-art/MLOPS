@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Welcome Page</title>
+	<style>
+		:root {
+			color-scheme: light;
+			font-family: Georgia, "Times New Roman", serif;
+			color: #17324d;
+			background: #f4f0e8;
+		}
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			min-height: 100vh;
+			display: grid;
+			place-items: center;
+			padding: 2rem;
+			background: linear-gradient(135deg, #f4f0e8, #d9e8e5);
+		}
+
+		main {
+			width: min(100%, 680px);
+			padding: clamp(2rem, 8vw, 5rem);
+			text-align: center;
+			background: rgba(255, 255, 255, 0.8);
+			border: 1px solid rgba(23, 50, 77, 0.15);
+			border-radius: 8px;
+			box-shadow: 0 1.5rem 3rem rgba(23, 50, 77, 0.12);
+		}
+
+		h1 {
+			margin: 0 0 1rem;
+			font-size: clamp(2.5rem, 8vw, 5rem);
+			line-height: 0.95;
+		}
+
+		p {
+			margin: 0 auto 2rem;
+			max-width: 34rem;
+			font-family: "Trebuchet MS", sans-serif;
+			font-size: 1.1rem;
+			line-height: 1.6;
+		}
+
+		button {
+			border: 0;
+			border-radius: 999px;
+			padding: 0.85rem 1.4rem;
+			color: #fff;
+			background: #d15b3f;
+			font: 600 1rem "Trebuchet MS", sans-serif;
+			cursor: pointer;
+			transition: transform 160ms ease, background 160ms ease;
+		}
+
+		button:hover,
+		button:focus-visible {
+			background: #ad432d;
+			transform: translateY(-2px);
+		}
+
+		#message {
+			min-height: 1.5em;
+			margin-top: 1rem;
+			color: #ad432d;
+			font-weight: 600;
+		}
+	</style>
+</head>
+<body>
+	<main>
+		<h1>Hello, world.</h1>
+		<p>This is a simple HTML starter page. Replace this text with your own content and make it yours.</p>
+		<button type="button" id="actionButton">Say hello</button>
+		<div id="message" aria-live="polite"></div>
+	</main>
+
+	<script>
+		const button = document.querySelector("#actionButton");
+		const message = document.querySelector("#message");
+
+		button.addEventListener("click", () => {
+			message.textContent = "Hello! Your page is working.";
+		});
+	</script>
+</body>
+</html>
