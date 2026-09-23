@@ -23,7 +23,6 @@
 			padding: 2rem;
 			background: linear-gradient(135deg, #f4f0e8, #d9e8e5);
 		}
-
 		main {
 			width: min(100%, 680px);
 			padding: clamp(2rem, 8vw, 5rem);
