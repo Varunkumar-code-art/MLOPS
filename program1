@@ -10,7 +10,7 @@
 			font-family: Georgia, "Times New Roman", serif;
 			color: #17324d;
 			background: #f4f0e8;
-		}
+
 		* {
 			box-sizing: border-box;
 		}
